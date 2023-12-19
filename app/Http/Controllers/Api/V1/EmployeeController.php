@@ -28,7 +28,12 @@ class EmployeeController extends Controller
                 'documents'
             ]
         )->get();
-        
+
+        $employees = [
+            "hola" => "mundo",
+            "Cara" => "Colas"
+        ];
+
         return ApiResponse::success($employees);
     }
 
