@@ -1,0 +1,43 @@
+@baseUrl = http://127.0.0.1:8000/api/v1
+
+@id = 1
+
+### Create a new company
+
+POST {{baseUrl}} HTTP/1.1
+Content-Type: application/json
+
+{
+  "company_name": "Acme Inc.",
+  "employer_register": "123456",
+  "RFC": "BECA951213",
+  "employer_representative": "John Doe",
+  "legal_representative": "Jane Doe",
+  "tax_residence": "Mexico"
+}
+
+### Get a specific company
+
+GET {{baseUrl}}/{{id}}  HTTP/1.1
+
+### Update a specific company
+
+PUT {{baseUrl}}/{{id}}  HTTP/1.1
+Content-Type: application/json
+
+{
+  "company_name": "Acme Corp.",
+  "employer_register": "654321",
+  "RFC": "BECA951213",
+  "employer_representative": "John Smith",
+  "legal_representative": "Jane Smith",
+  "tax_residence": "United States"
+}
+
+### Delete a specific company
+
+DELETE {{baseUrl}}/{{id}}  HTTP/1.1
+
+### Get a list of companies
+
+GET {{baseUrl}}/config/countries HTTP/1.1

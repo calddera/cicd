@@ -1,0 +1,28 @@
+@baseUrl = http://127.0.0.1:8000/api/v1/config/employee-statuses
+
+@id = 1
+
+### List employee statuses
+GET {{baseUrl}} HTTP/1.1
+
+### Get an employee status by ID
+GET {{baseUrl}}/{{id}} HTTP/1.1
+
+###  Create a new employee status
+POST {{baseUrl}} HTTP/1.1
+Content-Type: application/json
+
+{
+    "employee_status_name": "Juan"
+}
+
+### Update an existing employee status
+PUT {{baseUrl}}/{{id}} HTTP/1.1
+Content-Type: application/json
+
+{
+    "employee_status_name": "asdsa"
+}
+
+### Delete an employee status
+DELETE {{baseUrl}}/{{id}} HTTP/1.1

@@ -1,0 +1,61 @@
+@baseUrl = http://127.0.0.1:8000/api/v1/trucks/trucks
+
+// ID is UUID
+@id = 98d89572-4936-4db7-ae22-d54064588eaf
+
+### Get All Trucks
+
+GET {{baseUrl}} HTTP/1.1
+Content-Type: application/json
+
+###
+
+### Create Truck
+
+
+POST {{baseUrl}} HTTP/1.1
+Content-Type: application/json
+
+{
+  "unit_number": "UN123",
+  "vin_number": "VIN12347",
+  "vehicle_status_id": 1,
+  "odometer": 50.35,
+  "odometer_last_updated_at": "2023-10-30",
+  "is_active": true,
+  "fuel_percent": 10,
+  "fuel_last_updated_at": "2025-10-21"
+}
+
+###
+
+### Get Truck by ID
+
+GET {{baseUrl}}/{{id}}  HTTP/1.1
+
+###
+
+### Update Truck
+
+PUT {{baseUrl}}/{{id}} HTTP/1.1
+Content-Type: application/json
+
+{
+  "unit_number": "UN123",
+  "vin_number": "VIN12345",
+  "vehicle_status_id": 1,
+  "odometer": 50.35,
+  "odometer_last_updated_at": "2023-10-30",
+  "is_active": true,
+  "fuel_percent": 10,
+  "fuel_last_updated_at": "2025-10-21"
+}
+
+###
+
+### Delete Truck
+
+DELETE {{baseUrl}}/{{id}} HTTP/1.1
+Content-Type: application/json
+
+###

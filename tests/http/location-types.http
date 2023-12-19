@@ -1,0 +1,41 @@
+@baseUrl = http://127.0.0.1:8000/api/v1/customers/location-types
+
+// ID
+@id = 1
+
+#
+### Get All LocationTypes
+
+GET {{baseUrl}} HTTP/1.1
+Content-Type: application/json
+
+#
+### Create LocationType
+
+POST {{baseUrl}} HTTP/1.1
+Content-Type: application/json
+
+{
+  "location_type_name": "LocType1"
+}
+
+#
+### Get LocationType by ID
+
+GET {{baseUrl}}/{{id}}  HTTP/1.1
+
+#
+### Update LocationType
+
+PUT {{baseUrl}}/{{id}} HTTP/1.1
+Content-Type: application/json
+
+{
+  "location_type_name": "LocType1"
+}
+
+#
+### Delete LocationType
+
+DELETE {{baseUrl}}/{{id}} HTTP/1.1
+Content-Type: application/json

@@ -1,0 +1,46 @@
+@baseUrl = http://127.0.0.1:8000/api/v1/trailers/trailer-models
+
+@id = 1
+
+
+### Get All Trailer Models
+
+GET {{baseUrl}} HTTP/1.1
+Content-Type: application/json
+
+###
+
+### Create Trailer Model
+
+POST {{baseUrl}} HTTP/1.1
+Content-Type: application/json
+
+{
+  "trailer_model_name": "Model 1"
+}
+
+###
+
+### Get Trailer Model by ID
+
+GET {{baseUrl}}/{{id}} HTTP/1.1
+
+###
+
+### Update Trailer Model
+
+PUT {{baseUrl}}/{{id}} HTTP/1.1
+Content-Type: application/json
+
+{
+  "trailer_model_name": "Updated Model 1"
+}
+
+###
+
+### Delete Trailer Model
+
+DELETE {{baseUrl}}/{{id}} HTTP/1.1
+Content-Type: application/json
+
+###

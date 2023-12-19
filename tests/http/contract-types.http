@@ -1,0 +1,34 @@
+@baseUrl = http://127.0.0.1:8000/api/v1/companies/contract-types
+@id = 5
+
+### Get all contract types
+
+GET {{baseUrl}}
+
+### Get a specific contract type
+
+GET {{baseUrl}}/{{id}}
+
+### Create a new contract type
+
+POST {{baseUrl}}
+Content-Type: application/json
+
+{
+    "contract_type_name": "Fulal-tsiae",
+    "is_active": true
+}
+
+### Update an existing contract type
+
+PUT {{baseUrl}}/{{id}}
+Content-Type: application/json
+
+{
+    "contract_type_name": "Part-time",
+    "is_active": false
+}
+
+### Delete a contract type
+
+DELETE {{baseUrl}}/{{id}}

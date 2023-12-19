@@ -1,0 +1,67 @@
+@baseUrl = http://127.0.0.1:8000/api/v1/customers/customers
+
+// ID
+@id = 1
+
+//CustomerId
+@customerId = 1
+
+//LocationId
+@locationId = 1
+
+#
+### Get All Customers
+
+GET {{baseUrl}} HTTP/1.1
+Content-Type: application/json
+
+#
+### Get Customers LIKE ?search
+
+GET {{baseUrl}}?search=KKB HTTP/1.1
+Content-Type: application/json
+
+#
+### Create Customer
+
+POST {{baseUrl}} HTTP/1.1
+Content-Type: application/json
+
+{
+  "customer_name": "John Doe",
+  "customer_tax_residence": "Tax Residence",
+  "RFC": 1234567890137,
+  "is_active": true,
+  "customer_status_id": 1
+}
+
+#
+### Get Customer by ID
+
+GET {{baseUrl}}/{{id}}  HTTP/1.1
+
+#
+### Update Customer
+
+PUT {{baseUrl}}/{{id}} HTTP/1.1
+Content-Type: application/json
+
+{
+  "customer_name": "John Does",
+  "customer_tax_residence": "Tax Residence",
+  "RFC": 1234567890124,
+  "is_active": true,
+  "customer_status_id": 1
+}
+
+#
+### Delete Customer
+
+DELETE {{baseUrl}}/{{id}} HTTP/1.1
+Content-Type: application/json
+
+# # DEPRECATED
+# ### Get CustomerData : Locations from a Customer | Contacts of a Location
+
+# GET {{baseUrl}}/data/{{ customerId }}/{{ locationId }} HTTP/1.1
+# Content-Type: application/json

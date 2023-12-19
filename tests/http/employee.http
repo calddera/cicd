@@ -1,0 +1,95 @@
+@baseUrl = http://127.0.0.1:8000/api/v1
+
+
+### Store a new employee
+
+POST {{baseUrl}}/config/employees HTTP/1.1
+Content-Type: application/json
+
+{
+    "first_name": "John",
+    "first_surname": "Doe",
+    "second_surname": "Smith",
+    "gender": "M",
+    "NSS": "12345670925",
+    "RFC": "11122200324s5",
+    "CURP": "DOES001121JDFXXX01",
+    "contract_type_id": 1,
+    "salary_type_id": 1,
+    "workday_type_id": 1,
+    "SDI": 100.00,
+    "hire_date": "2023-02-05",
+    "job_id": 1,
+    "UMF": "UMF00",
+    "nationality": "Mexican",
+    "birth_country": "MEX",
+    "birth_state_code": "JAL",
+    "birth_city": "Guadalajara",
+    "address_country": "MEX",
+    "address_state_code": "JAL",
+    "address_city": "Zapopan",
+    "address_zipcode": "45010",
+    "address_description": "Calle falsa 123",
+    "marital_status": "Single",
+    "employee_status_id": 1,
+    "email": "john11.dSsoe@example.com",
+    "last_update_by": "admin",
+    "elo_team_id": 1,
+    "phone_number": "8713572220"
+}
+
+
+
+### Get all employees
+
+GET {{baseUrl}}/config/employees HTTP/1.1
+
+### Get an employee by ID
+
+GET {{baseUrl}}/config/employees/1 HTTP/1.1
+
+### Update an existing employee
+
+PUT {{baseUrl}}/config/employees/1 HTTP/1.1
+Content-Type: application/json
+
+{
+    "first_name": "John",
+    "first_surname": "Doe",
+    "second_surname": "Smith",
+    "gender": "M",
+    "NSS": "12345678901",
+    "RFC": "DOES900101XXX",
+    "CURP": "DOES900101HDFXXX01",
+    "contract_type_id": 1,
+    "salary_type_id": 1,
+    "workday_type_id": 1,
+    "SDI": 100.00,
+    "hire_date": "2023-02-05",
+    "job_id": 1,
+    "UMF": "UMF-001",
+    "nationality": "Mexican",
+    "birth_country": "MEX",
+    "birth_state_code": "JAL",
+    "birth_city": "Guadalajara",
+    "address_country": "MEX",
+    "address_state_code": "JAL",
+    "address_city": "Zapopan",
+    "address_zipcode": "45010",
+    "address_description": "Calle falsa 123",
+    "marital_status": "Single",
+    "employee_status_id": 1,
+    "email": "john.doe@example.com",
+    "last_update_by": "admin",
+    "elo_team_id": 1,
+    "cost_center_id": 1
+}
+
+###
+
+### Delete Employee
+
+DELETE {{baseUrl}}/api/v1/config/employees/2 HTTP/1.1
+Content-Type: application/json
+
+###

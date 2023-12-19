@@ -1,0 +1,35 @@
+@baseUrl = http://127.0.0.1:8000/api/v1/companies/cost-centers
+
+@id = 1
+
+### Get Cost Center
+
+GET {{baseUrl}}/{{id}} HTTP/1.1
+
+### Get All Cost Centers
+
+GET {{baseUrl}} HTTP/1.1
+
+### Create Cost Center
+
+POST {{baseUrl}} HTTP/1.1
+Content-Type: application/json
+
+{
+    "cost_center_code": "CC001",
+    "company_id": 1
+}
+
+### Update Cost Center
+
+PUT {{baseUrl}}/{{id}} HTTP/1.1
+Content-Type: application/json
+
+{
+    "cost_center_code": "CCss00s2",
+    "company_id": 2
+}
+
+### Delete Cost Center
+
+DELETE {{baseUrl}}/{{id}} HTTP/1.1

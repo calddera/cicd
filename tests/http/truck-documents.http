@@ -1,0 +1,58 @@
+@baseUrl = http://127.0.0.1:8000/api/v1/trucks/truck-documents
+
+// Id is UUID
+@id = 98c07693-b152-4cf5-b8f0-b4db85cd589c
+
+@truckId = 98b6aa0e-78c1-44b0-ad59-792735a02bc6
+
+### Get All Truck Documents
+
+GET {{baseUrl}} HTTP/1.1
+Content-Type: application/json
+
+###
+
+### Create Truck Document
+
+POST {{baseUrl}} HTTP/1.1
+Content-Type: application/json
+
+{
+  "truck_id": "{{truckId}}",
+  "document_id": 1,
+  "file_name": "FileName 1",
+  "file_path": "FilePath 1",
+  "valid_until": "2025-04-30",
+  "is_active": true
+}
+
+###
+
+### Get Truck Document by ID
+
+GET {{baseUrl}}/{{id}} HTTP/1.1
+
+###
+
+### Update Truck Document
+
+PUT {{baseUrl}}/{{id}} HTTP/1.1
+Content-Type: application/json
+
+{
+  "truck_id": "{{truckId}}",
+  "document_id": 1,
+  "file_name": "Updated FileName 1",
+  "file_path": "Updated FilePath 1",
+  "valid_until": "2025-04-30",
+  "is_active": true
+}
+
+###
+
+### Delete Truck Document
+
+DELETE {{baseUrl}}/{{id}} HTTP/1.1
+Content-Type: application/json
+
+###

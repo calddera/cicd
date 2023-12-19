@@ -1,0 +1,42 @@
+@baseUrl = http://127.0.0.1:8000/api/v1/customers/customer-statuses
+
+// ID
+@id = 1
+
+#
+### Get All CustomerStatuses
+
+GET {{baseUrl}} HTTP/1.1
+Content-Type: application/json
+
+#
+### Create CustomerStatus
+
+POST {{baseUrl}} HTTP/1.1
+Content-Type: application/json
+
+{
+  "customer_status_name": "Status1"
+}
+
+#
+### Get CustomerStatus by ID
+
+GET {{baseUrl}}/{{id}}  HTTP/1.1
+
+#
+### Update CustomerStatus
+
+PUT {{baseUrl}}/{{id}} HTTP/1.1
+Content-Type: application/json
+
+{
+  "customer_status_name": "Status1",
+  "is_active": true
+}
+
+#
+### Delete CustomerStatus
+
+DELETE {{baseUrl}}/{{id}} HTTP/1.1
+Content-Type: application/json

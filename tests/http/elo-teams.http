@@ -1,0 +1,38 @@
+@baseUrl = http://127.0.0.1:8000/api/v1/companies/elo-teams
+
+@id = 1
+
+### Get All Elo Teams
+
+GET {{baseUrl}}
+
+### Get Elo Team By ID
+
+GET {{baseUrl}}/{{id}}
+
+### Create Elo Team
+
+POST {{baseUrl}}
+Content-Type: application/json
+
+{
+    "elo_team_name": "Team A",
+    "is_active": true
+}
+
+### Update Elo Team
+
+PUT {{baseUrl}}/{{id}}
+Content-Type: application/json
+
+{
+    "elo_team_name": "Team B",
+    "is_active": false
+}
+
+
+### Delete Elo Team
+DELETE {{baseUrl}}/{{id}}
+Content-Type: application/json
+
+###

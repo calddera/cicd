@@ -1,0 +1,66 @@
+@baseUrl = http://127.0.0.1:8000/api/v1/customers/customer-locations
+
+// ID
+@id = 1
+
+// Customer_ID
+@customer_id = 1
+#
+### Get All CustomerLocations
+
+GET {{baseUrl}} HTTP/1.1
+Content-Type: application/json
+
+#
+### Get All CustomerLocations
+
+GET {{baseUrl}}?filters=customer_id,{{customer_id}}|is_active,1 HTTP/1.1
+Content-Type: application/json
+
+#
+### Create CustomerLocation
+
+POST {{baseUrl}} HTTP/1.1
+Content-Type: application/json
+
+{
+  "customer_id": "{{ customer_id }}",
+  "customer_location_name": "Location Name23223",
+  "customer_location_type_id": 1,
+  "location_country": "MEX",
+  "location_zipcode": "666666",
+  "location_lat": 1123.1,
+  "location_lng": 1141.2,
+  "geofence_id": 1,
+  "is_active": false
+}
+
+#
+### Get CustomerLocation by ID
+
+GET {{baseUrl}}/{{id}}  HTTP/1.1
+
+#
+### Update CustomerLocation
+
+PUT {{baseUrl}}/{{id}} HTTP/1.1
+Content-Type: application/json
+
+{
+  "customer_id": "{{ customer_id }}",
+  "customer_location_name": "Location Name",
+  "customer_location_type_id": 1,
+  "location_country": "MEX",
+  "location_zipcode": 666766,
+  "location_lat": 12312.41,
+  "location_lng": 123124.1,
+  "geofence_id": 1,
+  "is_active": true
+}
+
+
+#
+### Delete CustomerLocation
+
+DELETE {{baseUrl}}/{{id}} HTTP/1.1
+Content-Type: application/json

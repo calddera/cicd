@@ -1,0 +1,44 @@
+@baseUrl = http://127.0.0.1:8000/api/v1/config/geofences
+
+// ID
+@id = 1
+
+#
+### Get All Geofences
+
+GET {{baseUrl}} HTTP/1.1
+Content-Type: application/json
+
+#
+### Create Geofence
+
+POST {{baseUrl}} HTTP/1.1
+Content-Type: application/json
+
+{
+  "geofence_name": "Geofence1"
+   //"geofence_polygon": "POLYGON((0 0,10 0,10 10,0 10,0 0),(5 5,7 5,7 7,5 7,5 5))"
+}
+
+#
+### Get Geofence by ID
+
+GET {{baseUrl}}/{{id}}  HTTP/1.1
+
+#
+### Update Geofence
+
+PUT {{baseUrl}}/{{id}} HTTP/1.1
+Content-Type: application/json
+
+{
+  "geofence_name": "Geofence1"
+  //"geofence_polygon": "POLYGON((0 0,10 0,10 10,0 10,0 0),(5 5,7 5,7 7,5 7,5 5))",
+}
+
+
+#
+### Delete Geofence
+
+DELETE {{baseUrl}}/{{id}} HTTP/1.1
+Content-Type: application/json
