@@ -1,0 +1,46 @@
+@baseUrl = http://127.0.0.1:8000/api/v1/trailers/trailer-types
+
+@id = 1
+
+### Get All Trailer Types
+
+GET {{baseUrl}} HTTP/1.1
+Content-Type: application/json
+
+###
+
+### Create Trailer Type
+
+
+POST {{baseUrl}} HTTP/1.1
+Content-Type: application/json
+
+{
+  "trailer_type_name": "Trailer Type 1"
+}
+
+###
+
+### Get Trailer Type by ID
+
+GET {{baseUrl}}/{{id}} HTTP/1.1
+
+###
+
+### Update Trailer Type
+
+PUT {{baseUrl}}/{{id}}  HTTP/1.1
+Content-Type: application/json
+
+{
+  "trailer_type_name": "Updated Trailer Type 1"
+}
+
+###
+
+### Delete Trailer Type
+
+DELETE {{baseUrl}}/{{id}}  HTTP/1.1
+Content-Type: application/json
+
+###

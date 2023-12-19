@@ -1,0 +1,33 @@
+@baseUrl = http://127.0.0.1:8000/api/v1/companies/departments
+@id = 2
+
+
+
+### GET Department by ID
+GET {{baseUrl}}/{{id}}
+
+### GET List of Departments
+GET {{baseUrl}}
+
+### POST Create Department
+POST {{baseUrl}}
+Content-Type: application/json
+
+{
+  "company_id": 1,
+  "department_name": "IT Department",
+  "is_active": true
+}
+
+### PUT Update Department by ID
+PUT {{baseUrl}}/{{id}}
+Content-Type: application/json
+
+{
+  "company_id": 1,
+  "department_name": "New IT Department",
+  "is_active": true
+}
+
+### DELETE Department by ID
+DELETE {{baseUrl}}/{{id}}

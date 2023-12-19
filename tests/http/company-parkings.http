@@ -1,0 +1,52 @@
+@baseUrl = http://127.0.0.1:8000/api/v1/companies/company-parkings
+
+@id = 2
+
+
+### Get All Company Parkings
+
+GET {{baseUrl}} HTTP/1.1
+Content-Type: application/json
+
+###
+
+### Create Company Parkings
+
+POST {{baseUrl}} HTTP/1.1
+Content-Type: application/json
+
+{
+  "company_id": 1,
+  "parking_name": "Parking 2",
+  "parking_address": "Address 2",
+  "geofence_id": null
+}
+
+###
+
+### Get Company Parking by ID
+
+GET {{baseUrl}}/{{id}} HTTP/1.1
+
+###
+
+### Update Company Parking
+
+PUT {{baseUrl}}/{{id}} HTTP/1.1
+Content-Type: application/json
+
+{
+  "company_id": 1,
+  "parking_name": "Parking 2",
+  "parking_address": "Address 1",
+  "geofence_id": null
+}
+
+###
+
+### Delete Company Parking
+
+DELETE {{baseUrl}}/{{id}} HTTP/1.1
+Content-Type: application/json
+
+###

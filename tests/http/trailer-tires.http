@@ -1,0 +1,57 @@
+@baseUrl = http://127.0.0.1:8000/api/v1/trailers/trailer-tires
+
+// ID is UUID
+@id = 98b6a531-1b20-4357-a65d-4918c05a6808
+
+@trailerId = 98b64c2f-2e8c-4f50-b49f-3edb33cbc444
+
+### Get All Trailer Tires
+
+GET {{baseUrl}} HTTP/1.1
+Content-Type: application/json
+
+###
+
+### Create Trailer Tire
+
+
+POST {{baseUrl}} HTTP/1.1
+Content-Type: application/json
+
+{
+  "trailer_id": "{{trailerId}}",
+  "buy_date": "2023-10-23",
+  "buy_price": 20.4,
+  "serial_number": "SN540",
+  "is_active": false
+}
+
+###
+
+### Get Trailer Tire by ID
+
+GET {{baseUrl}}/{{id}}  HTTP/1.1
+
+###
+
+### Update Trailer Tire 
+
+PUT {{baseUrl}}/{{id}} HTTP/1.1
+Content-Type: application/json
+
+{
+  "trailer_id": "{{trailerId}}",
+  "buy_date": "2023-03-23",
+  "buy_price": 30.84,
+  "serial_number": "SN123",
+  "is_active": true
+}
+
+###
+
+### Delete Trailer Tire
+
+DELETE {{baseUrl}}/{{id}} HTTP/1.1
+Content-Type: application/json
+
+###

@@ -1,0 +1,59 @@
+@baseUrl = http://127.0.0.1:8000/api/v1/trailers/trailer-documents
+
+// Id is UUID
+@id = 98c06cc1-7078-48d6-9a84-6f71e9713e8c
+
+@trailerId = 98b64c2f-2e8c-4f50-b49f-3edb33cbc444
+
+### Get All Trailer Document
+
+GET {{baseUrl}} HTTP/1.1
+Content-Type: application/json
+
+###
+
+### Create Trailer Document
+
+
+POST {{baseUrl}} HTTP/1.1
+Content-Type: application/json
+
+{
+  "trailer_id": "{{trailerId}}",
+  "document_id": 1,
+  "file_name": "FileName 1",
+  "file_path": "FilePath 1",
+  "valid_until": "2025-04-30",
+  "is_active": true
+}
+
+###
+
+### Get Trailer Document by ID
+
+GET {{baseUrl}}/{{id}} HTTP/1.1
+
+###
+
+### Update Trailer Document
+
+PUT {{baseUrl}}/{{id}} HTTP/1.1
+Content-Type: application/json
+
+{
+  "trailer_id": "{{trailerId}}",
+  "document_id": 1,
+  "file_name": "Updated FileName 1",
+  "file_path": "Updated FilePath 1",
+  "valid_until": "2025-04-30",
+  "is_active": true
+}
+
+###
+
+### Delete Trailer Document
+
+DELETE {{baseUrl}}/{{id}} HTTP/1.1
+Content-Type: application/json
+
+###

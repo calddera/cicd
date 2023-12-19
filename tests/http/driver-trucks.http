@@ -1,0 +1,55 @@
+@baseUrl = http://127.0.0.1:8000/api/v1/trucks/driver-trucks
+
+// ID is UUID
+@id = 98b6a72d-4464-4dba-9030-4566e4f4b712
+
+@truckId = 98ca844d-29fc-4d2a-863f-3755e878421c
+
+@employeeId = 98b64c2f-2e8c-4f50-b49f-3edb33cbc444
+
+### Get All DriverTrucks
+
+GET {{baseUrl}} HTTP/1.1
+Content-Type: application/json
+
+###
+
+### Create DriverTruck
+
+
+POST {{baseUrl}} HTTP/1.1
+Content-Type: application/json
+
+{
+  "truck_id": "{{truckId}}",
+  "employee_id": "{{employeeId}}",
+  "is_active": true
+}
+
+###
+
+### Get DriverTruck by ID
+
+GET {{baseUrl}}/{{id}} HTTP/1.1
+
+###
+
+### Update DriverTruck
+
+PUT {{baseUrl}}/{{id}} HTTP/1.1
+Content-Type: application/json
+
+{
+  "truck_id": "{{truckId}}",
+  "employee_id": "{{employeeId}}",
+  "is_active": true
+}
+
+###
+
+### Delete DriverTruck
+
+DELETE {{baseUrl}}/{{id}} HTTP/1.1
+Content-Type: application/json
+
+###

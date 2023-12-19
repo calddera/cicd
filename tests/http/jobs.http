@@ -1,0 +1,32 @@
+# Obtiene todos los trabajos
+GET http://127.0.0.1:8000/api/v1/companies/companies/jobs
+###
+
+# Crea un nuevo trabajo
+POST http://localhost:8000/api/v1/companies/jobs
+Content-Type: application/json
+
+{
+    "department_id": 1,
+    "job_code": "JOB001",
+    "job_name": "Desarrollador de software"
+}
+###
+
+# Obtiene un trabajo específico
+GET http://localhost:8000/api/v1/companies/jobs/1
+###
+
+# Actualiza un trabajo específico
+PUT http://localhost:8000/api/v1/companies/jobs/1
+Content-Type: application/json
+
+{
+    "department_id": 2,
+    "job_code": "JOB002",
+    "job_name": "Ingeniero de software"
+}
+###
+
+# Elimina un trabajo específico
+DELETE http://localhost:8000/api/v1/companies/jobs/1

@@ -1,0 +1,59 @@
+@baseUrl = http://127.0.0.1:8000/api/v1/trucks/truck-plates
+
+// ID is UUID
+@id = 98b6af79-b5a7-4bcf-96b9-31e510115d2c
+
+@truckId = 98b6aa0e-78c1-44b0-ad59-792735a02bc6
+
+### Get All Truck Plate
+
+GET {{baseUrl}} HTTP/1.1
+Content-Type: application/json
+
+###
+
+### Create Truck Plate
+
+
+POST {{baseUrl}} HTTP/1.1
+Content-Type: application/json
+
+{
+  "truck_id": "{{truckId}}",
+  "plate_country": "MEX",
+  "plate_code": "PC123",
+  "plate_expires_at": "2025-10-25",
+  "is_active": true,
+  "plate_photo": null
+}
+
+###
+
+### Get Truck Plate by ID
+
+GET {{baseUrl}}/{{id}} HTTP/1.1
+
+###
+
+### Update Truck Plate
+
+PUT {{baseUrl}}/{{id}} HTTP/1.1
+Content-Type: application/json
+
+{
+  "truck_id": "{{truckId}}",
+  "plate_country": "MEX",
+  "plate_code": "PC123",
+  "plate_expires_at": "2025-10-25",
+  "is_active": true,
+  "plate_photo": null
+}
+
+###
+
+### Delete Truck Plate
+
+DELETE {{baseUrl}}/{{id}} HTTP/1.1
+Content-Type: application/json
+
+###

@@ -1,0 +1,46 @@
+@baseUrl = http://127.0.0.1:8000/api/v1/config/vehicle-statuses
+
+@id = 1
+
+### Get All Vehicle Statuses
+
+GET {{baseUrl}} HTTP/1.1
+Content-Type: application/json
+
+###
+
+### Create Vehicle Status
+
+
+POST {{baseUrl}} HTTP/1.1
+Content-Type: application/json
+
+{
+  "status_name": "New"
+}
+
+###
+
+### Get Vehicle Status by ID
+
+GET {{baseUrl}}/{{id}}  HTTP/1.1
+
+###
+
+### Update Vehicle Status
+
+PUT {{baseUrl}}/{{id}} HTTP/1.1
+Content-Type: application/json
+
+{
+  "status_name": "New"
+}
+
+###
+
+### Delete Vehicle Status
+
+DELETE {{baseUrl}}/{{id}} HTTP/1.1
+Content-Type: application/json
+
+###

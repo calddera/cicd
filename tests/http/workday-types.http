@@ -1,0 +1,36 @@
+@baseUrl = http://127.0.0.1:8000/api/v1/companies/workday-types
+
+@id = 1
+
+### GET Request - Retrieve All Workday Types
+
+GET {{baseUrl}}
+
+### GET Request - Retrieve a Single Workday Type
+
+GET {{baseUrl}}/{{id}}
+
+### POST Request - Create a New Workday Type
+
+POST {{baseUrl}}
+Content-Type: application/json
+
+{
+    "workday_type_name": "asdasd",
+    "workday_description_name": "assad"
+}
+
+### PUT Request - Update an Existing Workday Type
+
+PUT {{baseUrl}}/{{id}}
+Content-Type: application/json
+
+{
+    "workday_type_name": "rsadsad",
+    "workday_description_name": "asdsa"
+}
+
+### DELETE Request - Soft Delete a Workday Type
+
+DELETE {{baseUrl}}/{{id}}
+

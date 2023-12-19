@@ -1,0 +1,64 @@
+@baseUrl = http://127.0.0.1:8000/api/v1/customers/customer-location-contacts
+
+// ID
+@id = 1
+
+// Customer_Location_Id
+@customer_location_id = 1
+
+#
+### Get All CustomerLocationContacts
+
+GET {{baseUrl}} HTTP/1.1
+Content-Type: application/json
+
+#
+### Create CustomerLocationContact
+
+POST {{baseUrl}} HTTP/1.1
+Content-Type: application/json
+
+{
+  "customer_location_id": 1,
+  "contact_name": "John Doe",
+  "contact_email": "johndoe@email.com",
+  "contact_phone_number": 8181818181,
+  "is_active": true
+}
+
+#
+### Get Customers LIKE ?search
+
+GET {{baseUrl}}?search=KKB HTTP/1.1
+Content-Type: application/json
+
+#
+### Get Customers by LocationId ?filters
+
+GET {{baseUrl}}?filters=customer_location_id,{{ customer_location_id }} HTTP/1.1
+Content-Type: application/json
+
+#
+### Get CustomerLocationContact by ID
+
+GET {{baseUrl}}/{{id}}  HTTP/1.1
+
+#
+### Update CustomerLocationContact
+
+PUT {{baseUrl}}/{{id}} HTTP/1.1
+Content-Type: application/json
+
+{
+  "customer_location_id": 1,
+  "contact_name": "John Doe",
+  "contact_email": "johndoe@email.com",
+  "contact_phone_number": 8181818181,
+  "is_active": true
+}
+
+#
+### Delete CustomerLocationContact
+
+DELETE {{baseUrl}}/{{id}} HTTP/1.1
+Content-Type: application/json

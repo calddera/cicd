@@ -1,0 +1,50 @@
+@baseUrl = http://127.0.0.1:8000/api/v1/config/documents
+
+@id = 1
+
+### Get All Documents
+
+GET {{baseUrl}}?filters=document_type_id,0|document_name,like,%Examps% HTTP/1.1
+Content-Type: application/json
+
+###
+
+### Get  Document
+
+GET {{baseUrl}}/{{id}} HTTP/1.1
+Content-Type: application/json
+
+###
+
+### Create Document
+
+POST {{baseUrl}} HTTP/1.1
+Content-Type: application/json
+
+{
+  "document_name": "Exampssssaaasssle Dssocument",
+  "document_type_id": 2,
+  "is_mandatory": true
+}
+
+###
+
+### Update Document
+
+PUT {{baseUrl}}/{{id}} HTTP/1.1
+Content-Type: application/json
+
+{
+  "document_name": "Updated Document",
+  "document_type_id": 2,
+  "is_mandatory": false
+}
+
+###
+
+### Delete Document
+
+DELETE {{baseUrl}}/{{id}} HTTP/1.1
+Content-Type: application/json
+
+###

@@ -1,0 +1,33 @@
+@baseUrl = http://127.0.0.1:8000/api/v1/companies/salary-types
+
+@id = 2
+
+
+### POST Salary Types
+
+POST {{baseUrl}}
+Content-Type: application/json
+
+{
+    "salary_type_name": "Example Salary Type"
+}
+
+
+### GET Salary Types List
+
+GET {{baseUrl}}
+Content-Type: application/json
+
+### PUT Salary Types
+
+PUT {{baseUrl}}/{{id}}
+Content-Type: application/json
+
+{
+    "salary_type_name": "Updated Salary Type"
+}
+
+
+### DELETE Salary Types
+
+DELETE {{baseUrl}}/{{id}}
