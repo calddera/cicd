@@ -32,7 +32,8 @@ class EmployeeController extends Controller
         $employees = [
             "hola" => "mundo",
             "Cara" => "Colas",
-            "test" => "Demo Live"
+            "test" => "Demo Live",
+            "test" => "Demo Live",
         ];
 
         return ApiResponse::success($employees);
