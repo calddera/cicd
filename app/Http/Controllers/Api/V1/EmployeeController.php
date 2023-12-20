@@ -29,10 +29,6 @@ class EmployeeController extends Controller
             ]
         )->get();
 
-        $employees = [
-            "hola" => "mundo"
-        ];
-
         return ApiResponse::success($employees);
     }
 
